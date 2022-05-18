@@ -20,6 +20,7 @@ export default function Cadastrar({ navigation }: LoginTypes) {
   }
 
   return (
+    <View style={styles.container}>
         <KeyboardAvoidingView>
           <Text style={styles.title}>Cadastre-se</Text>
           <View style={styles.formRow}>
@@ -47,7 +48,6 @@ export default function Cadastrar({ navigation }: LoginTypes) {
           <Button title="Salvar" type="secondary" onPress={handleSignIn} />
           <Button title="Voltar" type="primary" onPress={handleLogin} />
         </KeyboardAvoidingView>
-
     </View>
   );
 }
