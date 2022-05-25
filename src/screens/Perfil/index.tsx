@@ -7,36 +7,37 @@ import Button from "../../components/Button";
 
 export default function Perfil() {
   return (
-        <Image source={require("../../assets/pfp.png")} />
-        <Text>Diogo Silva Salgado</Text>
-        <CardSocial>
-          <>
-            <FontAwesome5 name="facebook" />
-            <TextInput placeholder="https://facebook.com" />
-          </>
-        </CardSocial>
-        <CardSocial>
-          <>
-            <FontAwesome5 name="instagram" />
-            <TextInput placeholder="https://instagram.com" />
-          </>
-        </CardSocial>
-        <CardSocial>
-          <>
-            <FontAwesome5 name="linkedin" />
-            <TextInput placeholder="https://linkedin.com" />
-          </>
-        </CardSocial>
-        <Button
-          title="Salvar"
-          type="third"
-          onPress={() => console.log("Salvar")}
-        />
-        <Button
-          title="Alterar Senha"
-          type="third"
-          onPress={() => console.log("Alterar Senha")}
-        />
-        <Button title="Sair" type="third" onPress={() => console.log("Sair")} />
+    <View>
+      <Text style={styles.title}>Diogo Silva Salgado</Text>
+      <CardSocial>
+        <>
+          <FontAwesome5 name="facebook" style={styles.icon} />
+          <TextInput placeholder="https://facebook.com" style={styles.input} />
+        </>
+      </CardSocial>
+      <CardSocial>
+        <>
+          <FontAwesome5 name="instagram" style={styles.icon} />
+          <TextInput placeholder="https://instagram.com" style={styles.input} />
+        </>
+      </CardSocial>
+      <CardSocial>
+        <>
+          <FontAwesome5 name="linkedin" style={styles.icon} />
+          <TextInput placeholder="https://linkedin.com" style={styles.input} />
+        </>
+      </CardSocial>
+      <Button
+        title="Salvar"
+        type="third"
+        onPress={() => console.log("Salvar")}
+      />
+      <Button
+        title="Alterar Senha"
+        type="third"
+        onPress={() => console.log("Alterar Senha")}
+      />
+      <Button title="Sair" type="third" onPress={() => console.log("Sair")} />
+    </View>
   );
 }

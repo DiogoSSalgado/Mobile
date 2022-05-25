@@ -4,11 +4,11 @@ import colors from "../../styles/colors";
 const styles = StyleSheet.create({
   cardSocial: {
     backgroundColor: colors.thirdLight,
-    borderRadius: 10,
+    borderRadius: 40,
     margin: 10,
     flexDirection: "row",
     alignItems: "center",
-    width: "90%",
+    width: "95%",
     height: 45,
   }
 })

@@ -1,7 +1,7 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { ChatScreen, PerfilScreen } from "../screens";
-import { Ionicons } from "@expo/vector-icons";
+import { MapScreen, ChatScreen, PerfilScreen } from "../screens";
+import { Ionicons, FontAwesome } from "@expo/vector-icons";
 import colors from "../styles/colors";
 
 const Tab = createBottomTabNavigator();
@@ -11,9 +11,9 @@ export default function TabNavigation() {
     <Tab.Navigator
       screenOptions={{
         headerShown: false,
-        tabBarActiveBackgroundColor: colors.secondary,
+        tabBarActiveBackgroundColor: colors.primary,
         tabBarActiveTintColor: colors.white,
-        tabBarInactiveBackgroundColor: colors.secondaryLight,
+        tabBarInactiveBackgroundColor: colors.secondary,
         tabBarInactiveTintColor: colors.white,
       }}
     >
@@ -35,6 +35,18 @@ export default function TabNavigation() {
           ),
         }}
       />
+      <Tab.Screen
+        name="Mapa"
+        component={MapScreen}
+        options={{
+            tabBarIcon: () => (
+              <FontAwesome name="map-marker" size={24} color={colors.white} />
+            ),
+        }}
+    />
     </Tab.Navigator>
+    
   );
 }
+
+
